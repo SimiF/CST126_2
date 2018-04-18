@@ -1,6 +1,6 @@
 # CST126_2 - Stock Picker
 
-**Class ID:** <Your ID here>
+**Class ID:** Vulpix
 
 **Assignement ID:** CST126_01
 
