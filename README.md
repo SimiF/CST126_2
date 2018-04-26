@@ -4,9 +4,10 @@
 
 **Assignement ID:** CST126_01
 
-**Unresolved Issues:**
+**Unresolved Issues:** None.
 
-**Notes:**
+**Notes:** in the stock.cpp, if lines 26 & 27 did not exist, the code would jump instantly to 
+calculating the PE ratio without increasing the price by 10% causing errors. Why did it behave like that? 
 
 
 ---

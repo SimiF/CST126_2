@@ -8,30 +8,26 @@
 #include <iomanip>
 using namespace std;
 
-Stock_Info::Stock_Info(string & symbol, string & name_with_quotes, double & price, double & earnings)
+void Stock_Info::Print_Stock_Info(Stock_Info Stock_Data[])
 {
-	Update_Ticker(symbol);
-	Update_Name(name_with_quotes);
-	Update_Price(price);
-	Update_Earnings(earnings);
-
-	//cout << left << setw(5) << Return_Ticker() << setw(27) << Return_Name() << "Price: " << setw(10) 
-		// << Return_Price() << "Earnings " << setw(7) << Return_Earnings() << "P/E: "
-		 //<< setw(5) << Calculate_PE() << endl;
-
-	//cout << left << setw(5) << Stock.Ticker << setw(27) << Stock.Name << "Price: " 
-		 //<< setw(10) << Stock.Price << "Earnings " << setw(7) << Stock.Earnings << endl;
+	for (int i{}; i < 4; i++)
+	{
+		cout << left << setw(5) << Stock_Data[i].Return_Ticker() << setw(27) << Stock_Data[i].Return_Name()																																																																																												// originally created by Vulpix
+			 << "Price: " << setw(10) << Stock_Data[i].Return_Price() << "Earnings " << setw(7)
+			 << Stock_Data[i].Return_Earnings() << "P/E: " << setw(5) << Stock_Data[i].Calculate_PE()
+			 << endl;
+	}
 }
 
+void Stock_Info::Print_Stock_Info_Percentage(Stock_Info Stock_Data[])
+{
+	for (int i{}; i < 4; i++)
+	{
+		double increasedPrice{ Stock_Data[i].Percent_Increase_Price() };
+		double increasedPE{ Stock_Data[i].Calculate_Increased_PE() };
 
-/*int i = 0;
-stock_array[i].Update_Ticker(symbol);
-stock_array[i].Update_Name(name_with_quotes);
-stock_array[i].Update_Price(price);
-stock_array[i].Update_Earnings(earnings);
-
-cout << left << setw(5) << stock_array[i].Return_Ticker() << setw(27) << stock_array[i].Return_Name()
-<< "Price: " << setw(10) << stock_array[i].Return_Price() << "Earnings " << setw(7)
-<< stock_array[i].Return_Earnings() << "P/E: " << setw(5) << stock_array[i].Calculate_PE(price, earnings)
-<< endl;
-i++;*/
+		cout << left << setw(5) << Stock_Data[i].Return_Ticker() << setw(27) << Stock_Data[i].Return_Name()
+			<< "Price: " << setw(10) << increasedPrice << "Earnings " << setw(7)
+			<< Stock_Data[i].Return_Earnings() << "P/E: " << setw(5) << increasedPE << endl;
+	}
+}
