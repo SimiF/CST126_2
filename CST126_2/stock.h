@@ -5,8 +5,8 @@ class Stock_Info
 {
 	public:
 		Stock_Info() { Ticker = '\0'; Name = '\0'; Price = 0; Earnings = 0; };
-		static void Print_Stock_Info(Stock_Info Stock_Data[]);
-		static void Print_Stock_Info_Percentage(Stock_Info Stock_Data[]);
+		static void Print_Stock_Info(Stock_Info Stock_Data[], int i);
+		static void Print_Stock_Info_Percentage(Stock_Info Stock_Data[], int i, double percentage);
 		void Stock_Update(string & symbol, string & name_with_quotes, double & price, double & earnings)
 		{
 			Ticker = symbol;
@@ -51,9 +51,9 @@ class Stock_Info
 		{
 			return Earnings;
 		}
-		double Percent_Increase_Price()
+		double Percent_Increase_Price(double percentage)
 		{
-			Increased_Price = Price + ((0.1) * Price);																																																			// Originally created by Vulpix
+			Increased_Price = Price + ((1/percentage) * Price);																																																			// Originally created by Vulpix
 			return Increased_Price;
 		}
 		double Calculate_PE()
