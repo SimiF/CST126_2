@@ -1,3 +1,5 @@
+#ifndef STOCK_DATA
+
 #include <string>
 using namespace std;
 
@@ -6,7 +8,6 @@ class Stock_Info
 	public:
 		Stock_Info() { Ticker = '\0'; Name = '\0'; Price = 0; Earnings = 0; };
 		void Print_Stock_Info();
-		void Print_Stock_Info_Percentage(double percentage);
 		void Stock_Update(string & symbol, string & name_with_quotes, double & price, double & earnings)
 		{
 			Ticker = symbol;
@@ -61,14 +62,11 @@ class Stock_Info
 			double PE_Ratio = Price / Earnings;
 			return PE_Ratio;
 		}
-		double Calculate_Increased_PE()
-		{
-			double Increased_PE_Ratio = Price / Earnings;
-			return Increased_PE_Ratio;
-		}
 	private:
 		string Ticker;
 		string Name;
 		double Price;
 		double Earnings;
 };
+
+#endif /*STOCK_DATA*/
