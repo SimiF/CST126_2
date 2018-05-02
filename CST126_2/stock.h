@@ -1,6 +1,8 @@
-#ifndef STOCK_DATA
-
 #include <string>
+
+#ifndef STOCK_DATA
+#define STOCK_DATA
+
 using namespace std;
 
 class Stock_Info
