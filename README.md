@@ -6,8 +6,9 @@
 
 **Unresolved Issues:** None.
 
-**Notes:** in the stock.cpp, if lines 26 & 27 did not exist, the code would jump instantly to 
-calculating the PE ratio without increasing the price by 10% causing errors. Why did it behave like that? 
+**Notes:** Compiled with Microsoft Visual Studio. The code regarding opening quotes.csv and extracting the data
+in CST126_2.cpp is completed by professor. 
+
 
 
 ---
