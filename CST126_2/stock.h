@@ -7,14 +7,14 @@ class Stock_Info
 {
 	public:
 		Stock_Info() { Ticker = '\0'; Name = '\0'; Price = 0; Earnings = 0; };
-		void Print_Stock_Info();
-		void Stock_Update(string & symbol, string & name_with_quotes, double & price, double & earnings)
+		Stock_Info(string & symbol, string & name_with_quotes, double & price, double & earnings)
 		{
 			Ticker = symbol;
 			Name = name_with_quotes;
 			Price = price;
 			Earnings = earnings;
 		}
+		void Print_Stock_Info();
 		string Update_Ticker(string T) 
 		{
 			Ticker = T;
